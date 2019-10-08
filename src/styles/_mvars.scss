@@ -1,0 +1,71 @@
+//BS4 VARIABLE OVERRIDES 
+//GET THE BEST OUT OF SASS https://glennmccomb.com/articles/useful-sass-scss-media-query-mixins-for-bootstrap/
+
+//GRID COLUMNS
+$grid-columns: 12;
+
+$transition-collapse: height .35s ease !default;
+
+//GOOGLE FONTS
+$font-fam-mplus: 'M PLUS 1p', sans-serif; //500 700 900
+$font-fam-fira: 'Fira Sans Condensed', sans-serif;
+$font-fam-sec:  'Secular One', sans-serif; //for quotes
+
+
+//FONT SIZES
+$m-font-small: 0.9rem;
+$m-font-normal: 1rem;
+$m-font-large: 1.25rem;
+$m-font-large-x: 1.5rem;
+
+//BS4 DEFAULT FONT SIZE 
+$font-size-base: $m-font-normal;
+
+//COLORS
+$m-color-red: #da291c;
+$m-color-blue: #004c97;
+$m-color-blue-light: #007bff;
+$m-color-blue-lighter:#87cefa;
+$m-color-gold: #ffcd00;
+$m-color-white: #fff;
+$m-color-off-white: #f1f1f1;
+$m-color-grey-light: #efefef;
+$m-color-grey: #6c757d;
+$m-color-grey-dark: #333;
+
+//OVERRIDE BS4 THEME COLORS
+$theme-colors: (primary:$m-color-blue, secondary: $m-color-off-white, success: $m-color-grey, info: $m-color-grey-light, warning: $m-color-gold, light: $m-color-white, dark: $m-color-grey-dark);
+$theme-primary: map-get($theme-colors, "primary");
+$theme-secondary: map-get($theme-colors, "secondary");
+$theme-success: map-get($theme-colors, "success");
+$theme-info: map-get($theme-colors, "info");
+$theme-warning: map-get($theme-colors, "warning");
+$theme-light: map-get($theme-colors, "light");
+$theme-dark: map-get($theme-colors, "dark");
+
+//OVERRIDE BS4 BG COLORS
+@each $key,
+$val in $theme-colors {
+    html body .bg-#{$key} {
+        background-color: #{$val} !important;
+    }
+}
+
+@each $key,
+$val in $theme-colors {
+    html body a.text-#{$key} {
+        color: #{$val} !important;
+        &:hover {
+            //https://alligator.io/sass/if-else-statements/
+            @if $key=='warning' {
+                //color: $theme-light !important;
+            }
+        }
+
+        &:focus {
+            @if $key=='primary' {
+                //color: $theme-primary !important;
+            }
+        }
+    }
+}

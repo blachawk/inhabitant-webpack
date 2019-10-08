@@ -1,0 +1,35 @@
+//get bs4 dependencies
+//my vars
+@import "./mvars";
+
+// Required
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/reboot";
+
+// general
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/card";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/input-group";
+@import "~bootstrap/scss/alert";
+@import "~bootstrap/scss/badge";
+@import "~bootstrap/scss/tables";
+
+//navation
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/list-group";
+@import "~bootstrap/scss/tooltip";
+@import "~bootstrap/scss/transitions";
+
+//print
+//@import "print";
+
+//MY CUSTOM STYLES
+@import "./mstyles";

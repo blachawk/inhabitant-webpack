@@ -1,0 +1,118 @@
+html {
+    body {
+
+        font-family: $font-fam-fira;
+
+        //SCROLL TOP BTN 
+        .scroll-top-btn {
+            display:none;
+            position: fixed;
+            bottom: 1.25em;
+            right: 1.875em;
+            z-index: 99;
+            font-size: 1em;
+            border: none;
+            outline: 0;
+        }
+
+        //ANIMATE SPECIFIC ELEMENTS TO FADE IN/OUT
+        .manimate {
+            opacity: 0;
+            transition: opacity 0s;
+
+            &.show {
+                opacity: 1;
+                transition: opacity .2s;
+                padding-bottom: 1rem;
+            }
+        }
+
+        //HAMBURGER ICON
+        .mhamberger {
+            position: fixed !important;
+            top: 0;
+            right: 0;
+
+            //ANIMATION
+            .navbar-toggler {
+
+                opacity: 0.9;
+
+                .navbar-toggler-icon {
+                    background-image: none !important;
+
+                    &:after,
+                    &:before {
+                        background-color: #fff;
+                        border-radius: 1px;
+                        content: '';
+                        display: block;
+                        height: 3px;
+                        margin: 7px 0;
+                        transition: all .2s ease-in-out;
+                    }
+                }
+
+                &[aria-expanded="true"] {
+                    .navbar-toggler-icon {
+                        &:after {
+                            transform: translateY(-4px) rotate(135deg);
+                        }
+
+                        &:before {
+                            transform: translateY(6px) rotate(-135deg);
+                        }
+                    }
+                }
+            }
+        }
+
+        //TITLE
+        .mtitle {
+            font-family: $font-fam-mplus;
+            font-weight: 700;
+
+            @media (max-width: 330px) {
+                font-size: 1.5rem;
+                /*1rem = 16px*/
+            }
+        }
+
+        //MAIN MENU
+        #navbarToggleExternalContent {
+            .navbar-nav .nav-item {
+                .nav-link:hover {
+                    color: $m-color-gold!important;
+                }
+            }
+        }
+
+        //SITE INTRODUCTION
+        .mintro {
+            h2 {
+                font-weight: 300;
+            }
+        }
+
+        //ABOUT THE SELLER
+        .mabout {
+
+            //FANCY QUOTE
+            .quote {
+                font-size: 7em;
+                font-family: $font-fam-sec;
+                line-height: 1;
+                -webkit-transform: rotate(-180deg);
+                -moz-transform: rotate(-180deg);
+                -o-transform: rotate(-180deg);
+                transform: rotate(-180deg);
+                ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+                filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+            }
+
+            p {
+                font-weight: lighter;
+            }
+        }
+    }
+}

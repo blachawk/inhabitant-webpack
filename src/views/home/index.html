@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" class="inhabitant <%= htmlWebpackPlugin.options.mLayoutType %>">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="<%= htmlWebpackPlugin.options.mViewPort %>">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="<%= htmlWebpackPlugin.options.mFonts %>">
+        <title>
+            Inhabitant |
+            <%= htmlWebpackPlugin.options.title %>
+        </title>
+    </head>
+
+    <body>
+
+        <!--SCROLL TOP-->
+        <button class="btn btn-success scroll-top-btn" title="Go to top">Top</button>
+
+
+        <!--BEGIN HEADER-->
+        <div class="<%= htmlWebpackPlugin.options.mWrapperClass %>">
+            <%= require('html-loader!./../../partials/header.html') %>
+        </div>
+        <!--END HEADER-->
+
+        <!--INTRO-->
+        <div class="container">
+            <div class="row">
+                <div class="col py-4 text-center mintro">
+                    <h2>Expressive art for your buying pleasure</h2>
+                    <p>A vast collection of custom paintings, photographs and elaborite materials</p>
+                </div>
+            </div>
+        </div>
+
+        <!--ABOUT THE SELLER-->
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="bg-info text-center mabout pb-2">
+                        <p class="quote d-block p-0 m-0 text-success">&quot;</p>
+                        <p class="lead p-0">About the seller</p>
+                        <p class="py-0 px-4 pb-2" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore </p>
+                        <hr>
+                        <p>Seller<br><a class="text-primary" href="#">support@inhabitant.co</a></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--BEGIN FOOTER-->
+        <div class="<%= htmlWebpackPlugin.options.mWrapperClass %>">
+            <%= require('html-loader!./../../partials/footer.html') %>
+        </div>
+        <!--END FOOTER-->
+
+    </body>
+
+</html>

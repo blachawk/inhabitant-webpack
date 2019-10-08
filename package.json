@@ -1,39 +1,49 @@
 {
-    "name": "ffass0",
-    "version": "1.0.0",
-    "description": "An SSO enhancement landing page for 2018",
-    "main": "index.htm",
-    "scripts": {
-      "dev": "webpack --mode development",
-      "build": "webpack --mode production ",
-      "clean": "rm -r deploy",
-      "start": "npm run clean && npm run dev && webpack-dev-server --mode development"
-    },
-    "author": "blackhawk",
-    "license": "ISC",
-    "devDependencies": {
-      "@fortawesome/fontawesome": "^1.1.8",
-      "@fortawesome/fontawesome-free-solid": "^5.0.13",
-      "bootstrap": "^4.3.1",
-      "copy-webpack-plugin": "^5.0.3",
-      "css-loader": "^2.1.1",
-      "exports-loader": "^0.7.0",
-      "file-loader": "^3.0.1",
-      "html-loader": "^0.5.5",
-      "html-webpack-include-assets-plugin": "^2.0.0",
-      "html-webpack-partials-plugin": "^0.5.1",
-      "html-webpack-plugin": "^4.0.0-beta.5",
-      "jquery": "^3.4.1",
-      "mini-css-extract-plugin": "^0.6.0",
-      "node-sass": "^4.12.0",
-      "npm-check": "^5.9.0",
-      "popper.js": "^1.14.7",
-      "postcss-loader": "^3.0.0",
-      "sass-loader": "^7.1.0",
-      "webpack": "^4.29.4",
-      "webpack-cli": "^3.2.3",
-      "webpack-dev-server": "^3.1.14"
-    },
-    "dependencies": {}
-  }
-  
+  "name": "inhabitant.co",
+  "version": "1.0.0",
+  "description": "An SSO enhancement landing page for 2018",
+  "main": "index.htm",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production ",
+    "clean": "rm -r deploy",
+    "start": "npm run clean && npm run dev && webpack-dev-server --mode development"
+  },
+  "author": "blackhawk",
+  "license": "ISC",
+  "devDependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-free-solid": "^5.0.13",
+    "bootstrap": "^4.3.1",
+    "copy-webpack-plugin": "^5.0.3",
+    "css-loader": "^2.1.1",
+    "exports-loader": "^0.7.0",
+    "file-loader": "^3.0.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-include-assets-plugin": "^2.0.0",
+    "html-webpack-partials-plugin": "^0.5.1",
+    "html-webpack-plugin": "^4.0.0-beta.5",
+    "jquery": "^3.4.1",
+    "mini-css-extract-plugin": "^0.6.0",
+    "node-sass": "^4.12.0",
+    "npm-check": "^5.9.0",
+    "popper.js": "^1.14.7",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "webpack": "^4.29.4",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blachawk/inhabitant-webpack.git"
+  },
+  "keywords": [
+    "e-commerce"
+  ],
+  "bugs": {
+    "url": "https://github.com/blachawk/inhabitant-webpack/issues"
+  },
+  "homepage": "https://github.com/blachawk/inhabitant-webpack#readme"
+}

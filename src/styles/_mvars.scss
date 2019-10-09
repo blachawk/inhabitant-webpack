@@ -7,10 +7,12 @@ $grid-columns: 12;
 $transition-collapse: height .35s ease !default;
 
 //GOOGLE FONTS
-$font-fam-mplus: 'M PLUS 1p', sans-serif; //500 700 900
-$font-fam-fira: 'Fira Sans Condensed', sans-serif;
-$font-fam-sec:  'Secular One', sans-serif; //for quotes
-
+$font-fam-mplus: 'M PLUS 1p',
+sans-serif; //500 700 900
+$font-fam-fira: 'Fira Sans Condensed',
+sans-serif;
+$font-fam-sec: 'Secular One',
+sans-serif; //for quotes
 
 //FONT SIZES
 $m-font-small: 0.9rem;
@@ -26,7 +28,7 @@ $m-color-red: #da291c;
 $m-color-blue: #004c97;
 $m-color-blue-light: #007bff;
 $m-color-blue-lighter:#87cefa;
-$m-color-gold: #ffcd00;
+$m-color-gold: #c09a03ce;
 $m-color-white: #fff;
 $m-color-off-white: #f1f1f1;
 $m-color-grey-light: #efefef;
@@ -55,16 +57,25 @@ $val in $theme-colors {
 $val in $theme-colors {
     html body a.text-#{$key} {
         color: #{$val} !important;
-        &:hover {
-            //https://alligator.io/sass/if-else-statements/
-            @if $key=='warning' {
-                //color: $theme-light !important;
+
+        @if $key=='info' {
+
+            &:hover {
+                color: $m-color-gold !important;
+            }
+
+            &:active {
+                color: $m-color-blue-lighter !important;
             }
         }
 
-        &:focus {
-            @if $key=='primary' {
-                //color: $theme-primary !important;
+        @if $key=='success' {
+            &:hover {
+                color: $m-color-grey-dark !important;               
+            }
+
+            &:active {
+                color: $m-color-gold !important;
             }
         }
     }

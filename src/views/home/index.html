@@ -15,8 +15,7 @@
     <body>
 
         <!--SCROLL TOP-->
-        <button class="btn btn-success scroll-top-btn" title="Go to top">Top</button>
-
+        <button class="btn btn-success scroll-top-btn" title="Scroll Up">Top</button>
 
         <!--BEGIN HEADER-->
         <div class="<%= htmlWebpackPlugin.options.mWrapperClass %>">
@@ -24,32 +23,41 @@
         </div>
         <!--END HEADER-->
 
-        <!--INTRO-->
-        <div class="container">
+        <!--BEGIN INTRO-->
+        <div class="container mintro">
             <div class="row">
-                <div class="col py-4 text-center mintro">
+                <div class="col py-4 text-center">
                     <h2>Expressive art for your buying pleasure</h2>
                     <p>A vast collection of custom paintings, photographs and elaborite materials</p>
                 </div>
             </div>
         </div>
+        <!--END INTRO-->
+
+        <!--PRODUCT CATEGORY LINKS (SEE HOW THIS PLAYS OUT WITH WOOCOMMERCE OPTIONS HOME PAGE)-->
+        <ul class="list-inline d-flex justify-content-center mcategories">
+            <li class="list-inline-item"><a class="text-success" href="#">Photography</a></li>
+            <li class="list-inline-item"><a class="text-success" href="#">Paintings</a></li>
+            <li class="list-inline-item"><a class="text-success" href="#">Woodworking</a></li>
+            <li class="list-inline-item"><a class="text-success" href="#">Various</a></li>
+        </ul>
+        <!--END PRODUCT CATEGORY LINKS-->
 
         <!--ABOUT THE SELLER-->
-        <div class="container">
+        <div class="container mabout">
             <div class="row">
                 <div class="col">
-                    <div class="bg-info text-center mabout pb-2">
+                    <div class="bg-info text-center pb-2">
                         <p class="quote d-block p-0 m-0 text-success">&quot;</p>
                         <p class="lead p-0">About the seller</p>
                         <p class="py-0 px-4 pb-2" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore </p>
                         <hr>
-                        <p>Seller<br><a class="text-primary" href="#">support@inhabitant.co</a></p>
-
+                        <p>Seller Name<br><a class="text-primary" href="#">support@inhabitant.co</a></p>
                     </div>
                 </div>
             </div>
         </div>
-
+        <!--END ABOUT-->
 
         <!--BEGIN FOOTER-->
         <div class="<%= htmlWebpackPlugin.options.mWrapperClass %>">
@@ -58,5 +66,4 @@
         <!--END FOOTER-->
 
     </body>
-
 </html>

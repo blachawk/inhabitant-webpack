@@ -78,19 +78,23 @@ html {
             }
         }
 
-        //MAIN MENU
-        #navbarToggleExternalContent {
-            .navbar-nav .nav-item {
-                .nav-link:hover {
-                    color: $m-color-gold!important;
-                }
-            }
-        }
-
         //SITE INTRODUCTION
         .mintro {
             h2 {
                 font-weight: 300;
+            }
+            p {
+                font-family: $font-fam-fira;
+                font-weight:200;
+            }
+        }
+
+        //CATEGORY LINKS
+        .mcategories {
+            a {
+                &:hover {
+                    text-decoration-color:$theme-light;
+                }
             }
         }
 

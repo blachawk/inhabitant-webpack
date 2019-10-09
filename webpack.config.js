@@ -67,7 +67,7 @@ module.exports = {
           template: `./src/views/${event}/index.html`,
           favicon: '',//'./src/images/m_ico.ico',
           mViewPort: 'width=device-width, initial-scale=1.0',
-          mFonts: 'https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:300,400|M+PLUS+1p:500,700|Secular+One&display=swap',
+          mFonts: 'https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:200, 300,400|M+PLUS+1p:500,700|Secular+One&display=swap',
           mLayoutType: 'views',
           mWrapperClass: 'container-fluid p-0 m-0',
           //memblem: './src/images/m_emblem_white_58x75.png', //using file-loader as a backup until we get an answer on getting this to work with partial files | https://stackoverflow.com/questions/55268696/how-to-process-html-webpack-plugin-options-in-required-files | https://github.com/jantimon/html-webpack-plugin/issues/1179

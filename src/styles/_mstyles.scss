@@ -5,7 +5,7 @@ html {
 
         //SCROLL TOP BTN 
         .scroll-top-btn {
-            display:none;
+            display: none;
             position: fixed;
             bottom: 1.25em;
             right: 1.875em;
@@ -83,9 +83,10 @@ html {
             h2 {
                 font-weight: 300;
             }
+
             p {
                 font-family: $font-fam-fira;
-                font-weight:200;
+                font-weight: 200;
             }
         }
 
@@ -93,7 +94,7 @@ html {
         .mcategories {
             a {
                 &:hover {
-                    text-decoration-color:$theme-light;
+                    text-decoration-color: $theme-light;
                 }
             }
         }
@@ -101,7 +102,25 @@ html {
         //PRODUCT LISTINGS
         .mproducts {
             p {
-                margin:0.125em;
+                margin: 0.125em;
+            }
+
+            .add-to-cart {
+                margin: 0 auto;
+                padding: 0.150em;
+                font-size: 1em;
+                font-family: $font-fam-fira;
+                font-weight: bold;
+                text-transform: uppercase;
+                text-decoration-color: $theme-light;
+                // display:inline-block;
+                // padding:0.4em;
+                // font-weight:normal;
+                // color:$theme-light!important;
+                // background-color:$theme-dark;
+                &:hover {
+                    color:$theme-primary!important;
+                }
             }
         }
 

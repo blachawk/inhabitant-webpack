@@ -1,96 +1,155 @@
 <!DOCTYPE html>
 <html lang="en" class="inhabitant <%= htmlWebpackPlugin.options.mLayoutType %>">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="<%= htmlWebpackPlugin.options.mViewPort %>">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="<%= htmlWebpackPlugin.options.mFonts %>">
-        <title>
-            Inhabitant |
-            <%= htmlWebpackPlugin.options.title %>
-        </title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="<%= htmlWebpackPlugin.options.mViewPort %>">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="<%= htmlWebpackPlugin.options.mFonts %>">
+    <title>
+        Inhabitant |
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+</head>
 
-    <body>
+<body>
 
-        <!--SCROLL TOP-->
-        <button class="btn btn-success scroll-top-btn" title="Scroll Up">Top</button>
+    <!--SCROLL TOP-->
+    <button class="btn btn-success scroll-top-btn" title="Scroll Up">Top</button>
 
-        <!--BEGIN HEADER-->
-        <div class="<%= htmlWebpackPlugin.options.mWrapperClass %>">
-            <%= require('html-loader!./../../partials/header.html') %>
+    <!--BEGIN HEADER-->
+    <div class="<%= htmlWebpackPlugin.options.mWrapperClass %>">
+        <%= require('html-loader!./../../partials/header.html') %>
+    </div>
+    <!--END HEADER-->
+
+    <!--BEGIN INTRO-->
+    <div class="container mintro">
+        <div class="row">
+            <div class="col py-4 text-center">
+                <h2>Expressive art for your buying pleasure</h2>
+                <p>A vast collection of custom paintings, photographs and elaborite materials</p>
+            </div>
         </div>
-        <!--END HEADER-->
+    </div>
+    <!--END INTRO-->
 
-        <!--BEGIN INTRO-->
-        <div class="container mintro">
-            <div class="row">
-                <div class="col py-4 text-center">
-                    <h2>Expressive art for your buying pleasure</h2>
-                    <p>A vast collection of custom paintings, photographs and elaborite materials</p>
+    <!--PRODUCT CATEGORY LINKS (SEE HOW THIS PLAYS OUT WITH WOOCOMMERCE OPTIONS HOME PAGE)-->
+    <ul class="list-inline d-flex justify-content-center mcategories">
+        <li class="list-inline-item">
+            <a class="text-success" href="#">All</a>
+        </li>
+        <li class="list-inline-item">
+            <a class="text-success" href="#">Photography</a>
+        </li>
+        <li class="list-inline-item">
+            <a class="text-success" href="#">Paintings</a>
+        </li>
+        <li class="list-inline-item">
+            <a class="text-success" href="#">Woodworking</a>
+        </li>
+    </ul>
+    <!--END PRODUCT CATEGORY LINKS-->
+
+    <!--BEGIN PRODUCTS-->
+    <div class="container mproducts">
+        <div class="row">
+            <div class="col text-center mb-4 py-2">
+                <a href="#"><img src="images/stock/StockSnap_J98QBNOWT3.jpg" alt="..." class="img-fluid bg-info p-2 mb-2"></a>
+                <p>Product Name</p>
+                <p>$250.00</p>
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-center mb-4 py-2">
+                <a href="#"><img src="images/stock/StockSnap_3JMQFOTM1Z.jpg" alt="..." class="img-fluid bg-info p-2 mb-2"></a>
+                <p>Product Name</p>
+                <p>$250.00</p>
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-center mb-4 py-2">
+                <a href="#"><img src="images/stock/StockSnap_PMJLVDI011.jpg" alt="..." class="img-fluid bg-info p-2 mb-2"></a>
+                <p>Product Name</p>
+                <p>$250.00</p>
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-center mb-4 py-2">
+                <a href="#"><img src="images/stock/StockSnap_XMLAWG78SU.jpg" alt="..." class="img-fluid bg-info p-2 mb-2"></a>
+                <p>Product Name</p>
+                <p>$250.00</p>
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-center mb-4 py-2">
+                <a href="#"><img src="images/stock/StockSnap_5AV7DN80DU.jpg" alt="..." class="img-fluid bg-info p-2 mb-2"></a>
+                <p>Product Name</p>
+                <p>$250.00</p>
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-center mb-4 py-2">
+                <a href="#"><img src="images/stock/StockSnap_9PEBGIKZCZ.jpg" alt="..." class="img-fluid bg-info p-2 mb-2"></a>
+                <p>Product Name</p>
+                <p>$250.00</p>
+                </p>
+            </div>
+        </div>
+
+
+        
+        <div class="row">
+            <div class="col text-center mb-4 py-2">
+                <a href="#"><img src="images/stock/StockSnap_DWKVL4HHDU.jpg" alt="..." class="img-fluid bg-info p-2 mb-2"></a>
+                <p>Product Name</p>
+                <p>$250.00</p>
+                </p>
+            </div>
+        </div>
+
+
+
+    </div>
+    <!--END PRODUCTS-->
+
+    <!--ABOUT THE SELLER-->
+    <div class="container mabout">
+        <div class="row">
+            <div class="col">
+                <div class="bg-info text-center pb-2">
+                    <p class="quote d-block p-0 m-0 text-success">&quot;</p>
+                    <p class="lead p-0">About the seller</p>
+                    <p class="py-0 px-4 pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                        irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                    </p>
+                    <hr>
+                    <p>Seller Name<br><a class="text-primary" href="#">support@inhabitant.co</a>
+                    </p>
                 </div>
             </div>
         </div>
-        <!--END INTRO-->
+    </div>
+    <!--END ABOUT-->
 
-        <!--PRODUCT CATEGORY LINKS (SEE HOW THIS PLAYS OUT WITH WOOCOMMERCE OPTIONS HOME PAGE)-->
-        <ul class="list-inline d-flex justify-content-center mcategories">
-            <li class="list-inline-item">
-                <a class="text-success" href="#">Photography</a>
-            </li>
-            <li class="list-inline-item">
-                <a class="text-success" href="#">Paintings</a>
-            </li>
-            <li class="list-inline-item">
-                <a class="text-success" href="#">Woodworking</a>
-            </li>
-            <li class="list-inline-item">
-                <a class="text-success" href="#">Various</a>
-            </li>
-        </ul>
-        <!--END PRODUCT CATEGORY LINKS-->
+    <!--BEGIN FOOTER-->
+    <div class="<%= htmlWebpackPlugin.options.mWrapperClass %>">
+        <%= require('html-loader!./../../partials/footer.html') %>
+    </div>
+    <!--END FOOTER-->
 
-        <!--BEGIN PRODUCTS-->
-        <div class="container mproducts">
-            <div class="row">
-                <div class="col">
-                    <div class="bg-info text-center my-5 py-2">
-                        <img src="..." alt="..." class="img-thumbnail">
+</body>
 
-                     
-                        <hr>
-                        <p>Seller Name<br><a class="text-primary" href="#">support@inhabitant.co</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--END PRODUCTS-->
-
-        <!--ABOUT THE SELLER-->
-        <div class="container mabout">
-            <div class="row">
-                <div class="col">
-                    <div class="bg-info text-center pb-2">
-                        <p class="quote d-block p-0 m-0 text-success">&quot;</p>
-                        <p class="lead p-0">About the seller</p>
-                        <p class="py-0 px-4 pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                        </p>
-                        <hr>
-                        <p>Seller Name<br><a class="text-primary" href="#">support@inhabitant.co</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--END ABOUT-->
-
-        <!--BEGIN FOOTER-->
-        <div class="<%= htmlWebpackPlugin.options.mWrapperClass %>">
-            <%= require('html-loader!./../../partials/footer.html') %>
-        </div>
-        <!--END FOOTER-->
-
-    </body>
 </html>

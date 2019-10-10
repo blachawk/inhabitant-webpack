@@ -67,7 +67,7 @@ html {
             }
         }
 
-        //TITLE
+        //SITE TITLE
         .mtitle {
             font-family: $font-fam-mplus;
             font-weight: 700;
@@ -96,6 +96,10 @@ html {
                 &:hover {
                     text-decoration-color: $theme-light;
                 }
+
+                &.active {
+                    color: $theme-warning!important;
+                }
             }
         }
 
@@ -106,20 +110,24 @@ html {
             }
 
             .add-to-cart {
+                display:inline-block;
                 margin: 0 auto;
-                padding: 0.150em;
+                padding: 0.4em;
                 font-size: 1em;
                 font-family: $font-fam-fira;
                 font-weight: bold;
                 text-transform: uppercase;
                 text-decoration-color: $theme-light;
-                // display:inline-block;
-                // padding:0.4em;
+              
+                //DARK VERSION
                 // font-weight:normal;
                 // color:$theme-light!important;
                 // background-color:$theme-dark;
                 &:hover {
                     color:$theme-primary!important;
+                    //DARK VERSION
+                    // color:$theme-warning!important;
+                    // text-decoration-color: $theme-dark;
                 }
             }
         }

@@ -22,9 +22,9 @@ module.exports = {
     filename: 'bundle.[chunkhash:12].js',
     publicPath: ''
   },
+  devtool: 'source-map',
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.js$/,
         exclude: /node_modules/
       },
@@ -32,25 +32,39 @@ module.exports = {
         test: /\.(scss|css)$/,
         use: [
           MiniCssExtractPlugin.loader,
-          { loader: 'css-loader'},
-          { loader: 'postcss-loader', options: { plugins: []} },
-          { loader: 'sass-loader'}
+          { loader: 'css-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+          { loader: 'postcss-loader', options: { 
+            plugins: [],
+            sourceMap: true
+        } },
+          { loader: 'sass-loader',        
+            options: {
+              sourceMap: true
+            }
+          }
         ]
       },
       {
         test: /\.(png|jpg)$/,
-        use: [{loader: 'file-loader'}]
+        use: [{
+          loader: 'file-loader'
+        }]
       }
     ]
-  }, 
+  },
   plugins: [
 
-    new CopyPlugin([
-      {from: 'src/images/', to: 'images'},
-    ]),
+    new CopyPlugin([{
+      from: 'src/images/',
+      to: 'images'
+    }, ]),
 
     new MiniCssExtractPlugin({
-      filename: "bundle.[chunkhash:12].css",
+      filename: "bundle.[name].css",
       chunkFilename: "[name]-id.css"
     }),
 
@@ -60,22 +74,19 @@ module.exports = {
       'window.jQuery': 'jquery',
       Popper: ['popper.js', 'default']
     }),
-  
+
     ...['home'].map((event) => {
       return new HTMLWebpackPlugin({
-          title: `${event}`,
-          template: `./src/views/${event}/index.html`,
-          favicon: '',//'./src/images/m_ico.ico',
-          mViewPort: 'width=device-width, initial-scale=1.0',
-          mFonts: 'https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:200, 300,400|M+PLUS+1p:500,700|Secular+One&display=swap',
-          mLayoutType: 'views',
-          mWrapperClass: 'container-fluid p-0 m-0',
-          //memblem: './src/images/m_emblem_white_58x75.png', //using file-loader as a backup until we get an answer on getting this to work with partial files | https://stackoverflow.com/questions/55268696/how-to-process-html-webpack-plugin-options-in-required-files | https://github.com/jantimon/html-webpack-plugin/issues/1179
-          filename: `${event}.html`
+        title: `${event}`,
+        template: `./src/views/${event}/index.html`,
+        favicon: '', //'./src/images/m_ico.ico',
+        mViewPort: 'width=device-width, initial-scale=1.0',
+        mFonts: 'https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:200, 300,400|M+PLUS+1p:500,700|Secular+One&display=swap',
+        mLayoutType: 'views',
+        mWrapperClass: 'container-fluid p-0 m-0',
+        //memblem: './src/images/m_emblem_white_58x75.png', //using file-loader as a backup until we get an answer on getting this to work with partial files | https://stackoverflow.com/questions/55268696/how-to-process-html-webpack-plugin-options-in-required-files | https://github.com/jantimon/html-webpack-plugin/issues/1179
+        filename: `${event}.html`
       })
     }),
   ]
 }
-
-
-

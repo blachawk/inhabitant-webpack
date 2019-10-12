@@ -72,6 +72,12 @@ html {
             font-family: $font-fam-mplus;
             font-weight: 700;
 
+            a {
+                &:hover {
+                    text-decoration-color: $theme-light;
+                }
+            }
+
             @media (max-width: 330px) {
                 font-size: 1.5rem;
                 /*1rem = 16px*/
@@ -148,22 +154,32 @@ html {
                 padding: 0.4em;
                 font-size: 1em;
                 font-family: $font-fam-fira;
-                font-weight: bold;
+                font-weight: normal;
                 text-transform: uppercase;
                 text-decoration-color: $theme-light;
+
+            
               
                 //DARK VERSION
                 // font-weight:normal;
                 // color:$theme-light!important;
                 // background-color:$theme-dark;
                 &:hover {
-                    color:$theme-primary!important;
+                    color:$theme-warning!important;
+                    outline-color: $theme-dark;
+                    text-decoration-color:  $theme-dark;
                     //DARK VERSION
                     // color:$theme-warning!important;
                     // text-decoration-color: $theme-dark;
                 }
+
+                &:active {
+                    color:$theme-light!important;
+                    outline-color: $theme-dark;
+                    text-decoration-color:  $theme-dark; 
+                }
             }
-            
+
             .pdescription {
                 font-family: Arial, Helvetica, sans-serif;
                 color: $theme-success;

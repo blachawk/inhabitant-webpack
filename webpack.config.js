@@ -75,7 +75,7 @@ module.exports = {
       Popper: ['popper.js', 'default']
     }),
 
-    ...['home'].map((event) => {
+    ...['home','product01','product02'].map((event) => {
       return new HTMLWebpackPlugin({
         title: `${event}`,
         template: `./src/views/${event}/index.html`,

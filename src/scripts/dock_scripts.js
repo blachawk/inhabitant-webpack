@@ -72,7 +72,7 @@ function scrollbackup() {
 (function () {
     testjs()
     animatetopbar();
-    disableLinks();
+    //disableLinks();
     scrollbackup();
     bs4actions();
 })($);

@@ -53,7 +53,12 @@ module.exports = {
         use: [{
           loader: 'file-loader'
         }]
-      }
+      },
+      {
+        test: /\.json$/,
+        loader: 'file-loader',
+        type: 'javascript/auto'
+      },
     ]
   },
   plugins: [
@@ -61,6 +66,11 @@ module.exports = {
     new CopyPlugin([{
       from: 'src/images/',
       to: 'images'
+    }, ]),
+
+    new CopyPlugin([{
+      from: 'src/json/',
+      to: 'json'
     }, ]),
 
     new MiniCssExtractPlugin({

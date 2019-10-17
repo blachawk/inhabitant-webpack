@@ -48,30 +48,14 @@ module.exports = {
           }
         ]
       },
-      {
-        test: /\.(png|jpg)$/,
-        use: [{
-          loader: 'file-loader'
-        }]
-      },
-      {
-        test: /\.json$/,
-        loader: 'file-loader',
-        type: 'javascript/auto'
-      },
     ]
   },
   plugins: [
 
-    new CopyPlugin([{
-      from: 'src/images/',
-      to: 'images'
-    }, ]),
-
-    new CopyPlugin([{
-      from: 'src/json/',
-      to: 'json'
-    }, ]),
+    new CopyPlugin([
+      {from: 'src/images/', to: 'images', ignore: [ 'stock/**/*' ]},
+      {from: 'src/json/', to: 'json'},
+    ]),
 
     new MiniCssExtractPlugin({
       filename: "bundle.[name].css",

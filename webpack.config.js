@@ -11,7 +11,7 @@ module.exports = {
     watchContentBase: true,
     port: 8081,
     open: true,
-    index: 'home.html',
+    index: 'index.html',
     quiet: false,
   },
   entry: {
@@ -53,7 +53,7 @@ module.exports = {
   plugins: [
 
     new CopyPlugin([
-      {from: 'src/images/', to: 'images', ignore: [ 'stock/**/*' ]},
+      {from: 'src/images/', to: 'images', ignore: [ 'stock/**/*' , 'favicon-16x16.png']},
       {from: 'src/json/', to: 'json'},
     ]),
 

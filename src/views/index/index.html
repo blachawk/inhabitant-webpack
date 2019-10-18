@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="<%= htmlWebpackPlugin.options.mViewPort %>">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="<%= htmlWebpackPlugin.options.mFonts %>">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:200, 300,400|M+PLUS+1p:500,700|Secular+One&display=swap">
     <title>
         Inhabitant |
         <%= htmlWebpackPlugin.options.title %>
@@ -18,148 +18,142 @@
     <button class="btn btn-success scroll-top-btn" title="Scroll Up">Top</button>
 
     <!--BEGIN HEADER-->
-    <div class="<%= htmlWebpackPlugin.options.mWrapperClass %>">
-        <%= require('html-loader!./../../partials/header.html') %>
-    </div>
-    <!--END HEADER-->
 
-    <!--BEGIN INTRO-->
-    <div class="container mintro">
-        <div class="row">
-            <div class="col py-4 text-center">
-                <h2>Expressive art for your buying pleasure</h2>
-                <p>A vast collection of custom paintings, photographs and elaborite materials</p>
-            </div>
+<!--BEGIN HEADER-->
+<%= require('html-loader!./../../partials/header.html') %>
+<!--END HEADER-->
+
+<!--BEGIN INTRO-->
+<div class="container mintro">
+    <div class="row">
+        <div class="col py-4 text-center">
+            <h2>Expressive art for your buying pleasure</h2>
+            <p>A vast collection of custom paintings, photographs and elaborite materials</p>
         </div>
     </div>
-    <!--END INTRO-->
+</div>
+<!--END INTRO-->
 
-    <!--PRODUCT CATEGORY LINKS (SEE HOW THIS PLAYS OUT WITH WOOCOMMERCE OPTIONS HOME PAGE)-->
-    <ul class="list-inline d-flex justify-content-center mcategories">
-        <li class="list-inline-item">
-            <a class="text-success active" data-toggle="tooltip" data-placement="top" data-template="<div class='tooltip' role='tooltip'><div class='arrow'></div><div class='tooltip-inner'></div></div>" data-html="true" title="List all products"  href="#">All</a>
-        </li>
-        <li class="list-inline-item">
-            <a class="text-success" href="#">Photography</a>
-        </li>
-        <li class="list-inline-item">
-            <a class="text-success" href="#">Paintings</a>
-        </li>
-        <li class="list-inline-item">
-            <a class="text-success" href="#">Woodworking</a>
-        </li>
-    </ul>
-    <!--END PRODUCT CATEGORY LINKS-->
+<!--PRODUCT CATEGORY LINKS (SEE HOW THIS PLAYS OUT WITH WOOCOMMERCE OPTIONS HOME PAGE) -->
+<ul class="list-inline d-flex justify-content-center mcategories">
+    <li class="list-inline-item">
+        <a class="text-success active" data-toggle="tooltip" data-placement="top"
+            data-template="<div class='tooltip' role='tooltip'><div class='arrow'></div><div class='tooltip-inner'></div></div>"
+            data-html="true" title="List all products" href="#">All</a>
+    </li>
+    <li class="list-inline-item">
+        <a class="text-success" href="#">Photography</a>
+    </li>
+    <li class="list-inline-item">
+        <a class="text-success" href="#">Paintings</a>
+    </li>
+    <li class="list-inline-item">
+        <a class="text-success" href="#">Woodworking</a>
+    </li>
+</ul>
+<!--END PRODUCT CATEGORY LINKS-->
 
-    <!--BEGIN PRODUCTS-->
-    <div class="container mproducts">
-        <div class="row">
-            <div class="col text-center mb-5 py-2">
-                <a href="product01.html"><img src="images/StockSnap_J98QBNOWT3.jpg" alt="..."
-                        class="img-fluid bg-info p-2 mb-2"></a>
-                <p>Product Name</p>
-                <p>$250.00</p>
-                <p><a class="text-dark add-to-cart" href="#">Add To Cart</a></p>
-                </p>
-            </div>
+<!--BEGIN PRODUCTS-->
+<div class="container mproducts">
+    <div class="row">
+        <div class="col text-center mb-5 py-2">
+            <a href="product01.html"><img src="images/StockSnap_J98QBNOWT3.jpg" alt="..."
+                    class="img-fluid bg-info p-2 mb-2"></a>
+            <p>Product Name</p>
+            <p>$250.00</p>
+            <p><a class="text-dark add-to-cart" href="#">Add To Cart</a></p>
+            </p>
         </div>
-
-        <div class="row">
-            <div class="col text-center mb-5 py-2">
-                <a href="product02.html"><img src="images/StockSnap_3JMQFOTM1Z.jpg" alt="..."
-                        class="img-fluid bg-info p-2 mb-2"></a>
-                <p>Product Name</p>
-                <p>$250.00</p>
-                <p><a class="text-dark add-to-cart" href="#">Add To Cart</a></p>
-                </p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col text-center mb-5 py-2">
-                <a href="#"><img src="images/StockSnap_PMJLVDI011.jpg" alt="..."
-                        class="img-fluid bg-info p-2 mb-2"></a>
-                <p>Product Name</p>
-                <p>$250.00</p>
-                <p><a class="text-dark add-to-cart" href="#">Add To Cart</a></p>
-                </p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col text-center mb-5 py-2">
-                <a href="#"><img src="images/StockSnap_XMLAWG78SU.jpg" alt="..."
-                        class="img-fluid bg-info p-2 mb-2"></a>
-                <p>Product Name</p>
-                <p>$250.00</p>
-                <p><a class="text-dark add-to-cart" href="#">Add To Cart</a></p>
-                </p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col text-center mb-5 py-2">
-                <a href="#"><img src="images/StockSnap_5AV7DN80DU.jpg" alt="..."
-                        class="img-fluid bg-info p-2 mb-2"></a>
-                <p>Product Name</p>
-                <p>$250.00</p>
-                <p><a class="text-dark add-to-cart" href="#">Add To Cart</a></p>
-                </p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col text-center mb-5 py-2">
-                <a href="#"><img src="images/StockSnap_9PEBGIKZCZ.jpg" alt="..."
-                        class="img-fluid bg-info p-2 mb-2"></a>
-                <p>Product Name</p>
-                <p>$250.00</p>
-                <p><a class="text-dark add-to-cart" href="#">Add To Cart</a></p>
-                </p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col text-center mb-5 py-2">
-                <a href="#"><img src="images/StockSnap_DWKVL4HHDU.jpg" alt="..."
-                        class="img-fluid bg-info p-2 mb-2"></a>
-                <p>Product Name</p>
-                <p>$250.00</p>
-                <p><a class="text-dark add-to-cart" href="#">Add To Cart</a></p>
-                </p>
-            </div>
-        </div>
-
     </div>
-    <!--END PRODUCTS-->
 
-    <!--ABOUT THE SELLER-->
-    <div class="container mabout">
-        <div class="row">
-            <div class="col">
-                <div class="bg-info text-center pb-2">
-                    <p class="quote d-block p-0 m-0 text-success">&quot;</p>
-                    <p class="lead p-0">About the seller</p>
-                    <p class="py-0 px-4 pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                        irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                    </p>
-                    <hr>
-                    <p>Seller Name<br><a class="text-primary" href="#">support@inhabitant.co</a>
-                    </p>
-                </div>
+    <div class="row">
+        <div class="col text-center mb-5 py-2">
+            <a href="product02.html"><img src="images/StockSnap_3JMQFOTM1Z.jpg" alt="..."
+                    class="img-fluid bg-info p-2 mb-2"></a>
+            <p>Product Name</p>
+            <p>$250.00</p>
+            <p><a class="text-dark add-to-cart" href="#">Add To Cart</a></p>
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col text-center mb-5 py-2">
+            <a href="#"><img src="images/StockSnap_PMJLVDI011.jpg" alt="..." class="img-fluid bg-info p-2 mb-2"></a>
+            <p>Product Name</p>
+            <p>$250.00</p>
+            <p><a class="text-dark add-to-cart" href="#">Add To Cart</a></p>
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col text-center mb-5 py-2">
+            <a href="#"><img src="images/StockSnap_XMLAWG78SU.jpg" alt="..." class="img-fluid bg-info p-2 mb-2"></a>
+            <p>Product Name</p>
+            <p>$250.00</p>
+            <p><a class="text-dark add-to-cart" href="#">Add To Cart</a></p>
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col text-center mb-5 py-2">
+            <a href="#"><img src="images/StockSnap_5AV7DN80DU.jpg" alt="..." class="img-fluid bg-info p-2 mb-2"></a>
+            <p>Product Name</p>
+            <p>$250.00</p>
+            <p><a class="text-dark add-to-cart" href="#">Add To Cart</a></p>
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col text-center mb-5 py-2">
+            <a href="#"><img src="images/StockSnap_9PEBGIKZCZ.jpg" alt="..." class="img-fluid bg-info p-2 mb-2"></a>
+            <p>Product Name</p>
+            <p>$250.00</p>
+            <p><a class="text-dark add-to-cart" href="#">Add To Cart</a></p>
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col text-center mb-5 py-2">
+            <a href="#"><img src="images/StockSnap_DWKVL4HHDU.jpg" alt="..." class="img-fluid bg-info p-2 mb-2"></a>
+            <p>Product Name</p>
+            <p>$250.00</p>
+            <p><a class="text-dark add-to-cart" href="#">Add To Cart</a></p>
+            </p>
+        </div>
+    </div>
+
+</div>
+<!--END PRODUCTS-->
+
+<!--ABOUT THE SELLER-->
+<div class="container mabout">
+    <div class="row">
+        <div class="col">
+            <div class="bg-info text-center pb-2">
+                <p class="quote d-block p-0 m-0 text-success">&quot;</p>
+                <p class="lead p-0">About the seller</p>
+                <p class="py-0 px-4 pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                    irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                </p>
+                <hr>
+                <p>Seller Name<br><a class="text-primary" href="#">support@inhabitant.co</a>
+                </p>
             </div>
         </div>
     </div>
-    <!--END ABOUT-->
+</div>
+<!--END ABOUT-->
 
-    <!--BEGIN FOOTER-->
-    <div class="<%= htmlWebpackPlugin.options.mWrapperClass %>">
-        <%= require('html-loader!./../../partials/footer.html') %>
-    </div>
-    <!--END FOOTER-->
+<!--BEGIN FOOTER-->
+<%= require('html-loader!./../../partials/footer.html') %>
+<!--END FOOTER-->
 
 </body>
-
 </html>

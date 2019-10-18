@@ -32,29 +32,50 @@ module.exports = {
         test: /\.(scss|css)$/,
         use: [
           MiniCssExtractPlugin.loader,
-          { loader: 'css-loader',
+          {
+            loader: 'css-loader',
             options: {
               sourceMap: true,
             },
           },
-          { loader: 'postcss-loader', options: { 
-            plugins: [],
-            sourceMap: true
-        } },
-          { loader: 'sass-loader',        
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: [],
+              sourceMap: true
+            }
+          },
+          {
+            loader: 'sass-loader',
             options: {
               sourceMap: true
             }
           }
         ]
       },
+      // {
+      //   test: /\.html$/,
+      //   include: path.join(__dirname, 'src/views'),
+      //   use: [{
+      //     loader: 'html-loader',
+      //     options: {
+      //       interpolate: true
+      //     },
+      //   }]
+      // },
     ]
   },
   plugins: [
 
-    new CopyPlugin([
-      {from: 'src/images/', to: 'images', ignore: [ 'stock/**/*' , 'favicon-16x16.png']},
-      {from: 'src/json/', to: 'json'},
+    new CopyPlugin([{
+        from: 'src/images/',
+        to: 'images',
+        ignore: ['stock/**/*', 'favicon-16x16.png']
+      },
+      {
+        from: 'src/json/',
+        to: 'json'
+      },
     ]),
 
     new MiniCssExtractPlugin({
@@ -69,7 +90,7 @@ module.exports = {
       Popper: ['popper.js', 'default']
     }),
 
-    ...['index','product01','product02'].map((event) => {
+    ...['index', 'product01', 'product02'].map((event) => {
       return new HTMLWebpackPlugin({
         title: `${event}`,
         template: `./src/views/${event}/index.html`,
@@ -77,8 +98,7 @@ module.exports = {
         mViewPort: 'width=device-width, initial-scale=1.0',
         mFonts: 'https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:200, 300,400|M+PLUS+1p:500,700|Secular+One&display=swap',
         mLayoutType: 'views',
-        mWrapperClass: 'container-fluid p-0 m-0',
-        filename: `${event}.html`
+        filename: `${event}.html`,
       })
     }),
   ]

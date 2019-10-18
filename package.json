@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production ",
-    "clean": "rm -r deploy",
+    "clean": "rm -rf deploy",
     "start": "npm run clean && npm run dev && webpack-dev-server --mode development"
   },
   "author": "blackhawk",

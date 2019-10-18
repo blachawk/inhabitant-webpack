@@ -1,7 +1,7 @@
 'use strict';
 const webpack = require('webpack');
 const path = require('path');
-const HTMLWebpackPlugin = require('html-webpack-plugin');
+const htmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyPlugin = require('copy-webpack-plugin');
 
@@ -22,7 +22,7 @@ module.exports = {
     filename: 'bundle.[name].[chunkhash:12].js',
     publicPath: ''
   },
-  devtool: 'source-map',
+  devtool: '', //'source-map',
   module: {
     rules: [{
         test: /\.js$/,
@@ -53,16 +53,6 @@ module.exports = {
           }
         ]
       },
-      // {
-      //   test: /\.html$/,
-      //   include: path.join(__dirname, 'src/views'),
-      //   use: [{
-      //     loader: 'html-loader',
-      //     options: {
-      //       interpolate: true
-      //     },
-      //   }]
-      // },
     ]
   },
   plugins: [
@@ -90,15 +80,19 @@ module.exports = {
       Popper: ['popper.js', 'default']
     }),
 
-    ...['index', 'product01', 'product02'].map((event) => {
-      return new HTMLWebpackPlugin({
-        title: `${event}`,
-        template: `./src/views/${event}/index.html`,
+    ...['index','product01','product02'].map((event) => {
+      return new htmlWebpackPlugin({
+        template: `./src/views/${event}/index.html.ejs`,
         favicon: `./src/images/favicon-16x16.png`,
-        mViewPort: 'width=device-width, initial-scale=1.0',
-        mFonts: 'https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:200, 300,400|M+PLUS+1p:500,700|Secular+One&display=swap',
-        mLayoutType: 'views',
         filename: `${event}.html`,
+        templateParameters(compilation, assets, options) {
+          return {
+              mViewPort: 'width=device-width, initial-scale=1.0',
+              mFonts: 'https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:200, 300,400|M+PLUS+1p:500,700|Secular+One&display=swap',
+              mLayoutType: 'views',
+              title: `${event}`,
+          }
+        }
       })
     }),
   ]

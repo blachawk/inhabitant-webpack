@@ -1,35 +1,17 @@
-<!DOCTYPE html>
-<html lang="en" class="inhabitant <%= htmlWebpackPlugin.options.mLayoutType %>">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="<%= htmlWebpackPlugin.options.mViewPort %>">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:200, 300,400|M+PLUS+1p:500,700|Secular+One&display=swap">
-    <title>
-        Inhabitant |
-        <%= htmlWebpackPlugin.options.title %>
-    </title>
-</head>
-
-<body>
-
-    <!--SCROLL TOP-->
-    <button class="btn btn-success scroll-top-btn" title="Scroll Up">Top</button>
-
-    <!--BEGIN HEADER-->
-
-<!--BEGIN HEADER-->
-<%= require('html-loader!./../../partials/header.html') %>
-<!--END HEADER-->
+<%
+var template = require("html-loader!./../../partials/header.html")
+var topmenu = require("html-loader!./../../partials/top_menu.html")
+%>
+<%= template.replace('${mFonts}', mFonts).replace('${mLayoutType}', mLayoutType).replace('${mViewPort}', mViewPort).replace('${title}', title) %>
+<%= topmenu %>
 
     <!--BEGIN PRODUCT DETAILS-->
     <div class="container mproductdetails">
         <div class="row">
             <div class="col text-left mb-5 py-2">
-               <a href="product02.html"><img src="images/StockSnap_3JMQFOTM1Z.jpg" alt="..."
+                <a href="product01.html"><img src="images/StockSnap_J98QBNOWT3.jpg" alt="..."
                         class="img-fluid bg-info p-2 mb-2"></a>
-                <h2>Product 02</h2>
+                <h2>Product 01</h2>
                 <hr>
                 <p>$250.00</p>
                 <div class="pdescription my-2">
@@ -60,9 +42,10 @@
     <!--END PRODUCT DETAILS-->
 
 
-<!--BEGIN FOOTER-->
-<%= require('html-loader!./../../partials/footer.html') %>
-<!--END FOOTER-->
 
-</body>
-</html>
+<!--BEGIN FOOTER-->
+<%
+var footer = require("html-loader!./../../partials/footer.html")
+%>
+<%= footer %>
+<!--END FOOTER-->

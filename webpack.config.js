@@ -9,7 +9,7 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'src'),
     watchContentBase: true,
-    port: 8080,
+    port: 8081,
     open: true,
     index: 'home.html',
     quiet: false,
@@ -19,7 +19,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, '/deploy'),
-    filename: 'bundle.[chunkhash:12].js',
+    filename: 'bundle.[name].[chunkhash:12].js',
     publicPath: ''
   },
   devtool: 'source-map',
@@ -58,7 +58,7 @@ module.exports = {
     ]),
 
     new MiniCssExtractPlugin({
-      filename: "bundle.[name].css",
+      filename: "bundle.[name].[chunkhash:12].css",
       chunkFilename: "[name]-id.css"
     }),
 
@@ -69,16 +69,15 @@ module.exports = {
       Popper: ['popper.js', 'default']
     }),
 
-    ...['home','product01','product02'].map((event) => {
+    ...['index','product01','product02'].map((event) => {
       return new HTMLWebpackPlugin({
         title: `${event}`,
         template: `./src/views/${event}/index.html`,
-        favicon: '', //'./src/images/m_ico.ico',
+        favicon: `./src/images/favicon-16x16.png`,
         mViewPort: 'width=device-width, initial-scale=1.0',
         mFonts: 'https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:200, 300,400|M+PLUS+1p:500,700|Secular+One&display=swap',
         mLayoutType: 'views',
         mWrapperClass: 'container-fluid p-0 m-0',
-        //memblem: './src/images/m_emblem_white_58x75.png', //using file-loader as a backup until we get an answer on getting this to work with partial files | https://stackoverflow.com/questions/55268696/how-to-process-html-webpack-plugin-options-in-required-files | https://github.com/jantimon/html-webpack-plugin/issues/1179
         filename: `${event}.html`
       })
     }),
